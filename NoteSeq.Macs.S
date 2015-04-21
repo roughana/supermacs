@@ -81,3 +81,8 @@ _StartInts MAC
 _StopInts MAC
  Tool $141A
  <<<
+~StartSeqRel MAC
+ PxL ]1;]2;]3
+_StartSeqRel MAC
+ Tool $151A
+ <<<

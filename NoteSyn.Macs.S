@@ -6,50 +6,60 @@
 ; All Rights Reserved
 ;
 _NSBootInit MAC
- Tool $0119
+ Tool $119
  <<<
 ~NSStartUp MAC
  PHWL ]1;]2
 _NSStartUp MAC
- Tool $0219
+ Tool $219
  <<<
 _NSShutDown MAC
- Tool $0319
+ Tool $319
  <<<
 ~NSVersion MAC
  PHA
 _NSVersion MAC
- Tool $0419
+ Tool $419
  <<<
 _NSReset MAC
- Tool $0519
+ Tool $519
  <<<
 ~NSStatus MAC
  PHA
 _NSStatus MAC
- Tool $0619
+ Tool $619
  <<<
 ~AllocGen MAC
  P1SW ]1
 _AllocGen MAC
- Tool $0919
+ Tool $919
  <<<
 ~DeallocGen MAC
  PHW ]1
 _DeallocGen MAC
- Tool $0A19
+ Tool $A19
  <<<
 ~NoteOn MAC
  PxW ]1;]2;]3
  PHL ]4
 _NoteOn MAC
- Tool $0B19
+ Tool $B19
  <<<
 ~NoteOff MAC
  PxW ]1;]2
 _NoteOff MAC
- Tool $0C19
+ Tool $C19
  <<<
 _AllNotesOff MAC
- Tool $0D19
+ Tool $D19
+ <<<
+~NSSetUpdateRate MAC
+ P1SW ]1
+_NSSetUpdateRate MAC
+ Tool $E19
+ <<<
+~NSSetUserUpdateRtn MAC
+ P2SL ]1
+_NSSetUserUpdateRtn MAC
+ Tool $F19
  <<<

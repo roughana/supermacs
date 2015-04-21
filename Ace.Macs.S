@@ -5,7 +5,6 @@
 ; and Roger Wagner Publishing, Inc. 1988
 ; All Rights Reserved
 ;
-
 _ACEBootInit MAC
  Tool $11D
  <<<
@@ -52,4 +51,14 @@ _ACECompBegin MAC
  <<<
 _ACEExpBegin MAC
  Tool $C1D
+ <<<
+~GetACEExpState MAC
+ PHL ]1
+_GetACEExpState MAC
+ Tool $D1D
+ <<<
+~SetACEExpState MAC
+ PHL ]1
+_SetACEExpState MAC
+ Tool $E1D
  <<<

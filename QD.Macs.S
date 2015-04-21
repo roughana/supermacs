@@ -266,8 +266,6 @@ _SolidPattern MAC
  Tool $3904
  <<<
 ~MoveTo MAC
-GotoXY MAC
-QDGotoXY MAC
  PxW ]1;]2
 _MoveTo MAC
  Tool $3A04
@@ -1084,4 +1082,20 @@ _GetRomFont MAC
  PHLW ]1;]2
 _GetFontLore MAC
  Tool $D904
+ <<<
+~Get640Colors MAC
+ PHA
+_Get640Colors MAC
+ Tool $DA04
+ <<<
+~Set640Color MAC
+ PHW ]1
+_Set640Color MAC
+ Tool $DB04
+ <<<
+
+~qQDStartUp MAC
+ NextDP ]1;$300
+ PxW ]2;]3;]4
+ Tool $204
  <<<

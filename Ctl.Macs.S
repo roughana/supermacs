@@ -11,11 +11,9 @@ _CtlBootInit MAC
 ~CtlStartUp MAC
  PxW ]1;]2
 _CtlStartUp MAC
-_InitCtrlMgr MAC
  Tool $210
  <<<
 _CtlShutDown MAC
-_CtrlShutDown MAC
  Tool $310
  <<<
 ~CtlVersion MAC
@@ -184,4 +182,117 @@ _EraseControl MAC
  PHL ]1
 _DrawOneCtl MAC
  Tool $2510
+ <<<
+~FindTargetCtl MAC
+ PHS 2
+_FindTargetCtl MAC
+ Tool $2610
+ <<<
+~MakeNextCtlTarget MAC
+ PHS 2
+_MakeNextCtlTarget MAC
+ Tool $2710
+ <<<
+~MakeThisCtlTarget MAC
+ PHL ]1
+_MakeThisCtlTarget MAC
+ Tool $2810
+ <<<
+~SendEventToCtl MAC
+ P1SW ]1
+ PxL ]2;]3
+_SendEventToCtl MAC
+ Tool $2910
+ <<<
+~GetCtlID MAC
+ P2SL ]1
+_GetCtlID MAC
+ Tool $2A10
+ <<<
+~SetCtlID MAC
+ PxL ]1;]2
+_SetCtlID MAC
+ Tool $2B10
+ <<<
+~CallCtlDefProc MAC
+ PHLW ]1;]2
+ PHL ]3
+_CallCtlDefProc MAC
+ Tool $2C10
+ <<<
+~NotifyCtls MAC
+ PxW ]1;]2
+ PxL ]3;]4
+_NotifyCtls MAC
+ Tool $2D10
+ <<<
+~GetCtlMoreFlags MAC
+ P1SL ]1
+_GetCtlMoreFlags MAC
+ Tool $2E10
+ <<<
+~SetCtlMoreFlags MAC
+ PHWL ]1;]2
+_SetCtlMoreFlags MAC
+ Tool $2F10
+ <<<
+~GetCtlHandleFromID MAC
+ PHS 2
+ PxL ]1;]2
+_GetCtlHandleFromID MAC
+ Tool $3010
+ <<<
+~NewControl2 MAC
+ P2SL ]1
+ PHWL ]2;]3
+_NewControl2 MAC
+ Tool $3110
+ <<<
+~CMLoadResource MAC
+ P2SW ]1
+ PHL ]2
+_CMLoadResource MAC
+ Tool $3210
+ <<<
+~CMReleaseResource MAC
+ PHWL ]1;]2
+_CMReleaseResource MAC
+ Tool $3310
+ <<<
+~SetCtlParamPtr MAC
+ PHL ]1
+_SetCtlParamPtr MAC
+ Tool $3410
+ <<<
+~GetCtlParamPtr MAC
+ PHS 2
+_GetCtlParamPtr MAC
+ Tool $3510
+ <<<
+~InvalCtls MAC
+ PHL ]1
+_InvalCtls MAC
+ Tool $3710
+ <<<
+~FindRadioButton MAC
+ P1SL ]1
+ PHW ]2
+_FindRadioButton MAC
+ Tool $3910
+ <<<
+~SetLETextByID MAC
+ PxL ]1;]2;]3
+_SetLETextByID MAC
+ Tool $3A10
+ <<<
+~GetLETextByID MAC
+ PxL ]1;]2;]3
+_GetLETextByID MAC
+ Tool $3B10
+ <<<
+
+~qCtlStartUp MAC
+ PHW ]1
+ NextDP ]2;$100
+ Tool $210
  <<<

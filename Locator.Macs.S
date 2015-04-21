@@ -104,3 +104,40 @@ _MessageCenter MAC
 _SetDefaultTPT MAC
  Tool $1601
  <<<
+~MessageByName MAC
+ PHS 2
+ PHWL ]1;]2
+ PxW ]3;]4
+_MessageByName MAC
+ Tool $1701
+ <<<
+~StartupTools MAC
+ PHS 2
+ PxW ]1;]2
+ PHL ]3
+_StartupTools MAC
+ Tool $1801
+ <<<
+~ShutdownTools MAC
+ PHWL ]1;]2
+_ShutdownTools MAC
+ Tool $1901
+ <<<
+~GetMsgHandle MAC
+ PHS 2
+ PHWL ]1;]2
+_GetMsgHandle MAC
+ Tool $1A01
+ <<<
+~AcceptRequests MAC
+ PHL ]1
+ PHWL ]2;]3
+_AcceptRequests MAC
+ Tool $1B01
+ <<<
+~SendRequest MAC
+ PxW ]1;]2
+ PxL ]3;]4;]5
+_SendRequest MAC
+ Tool $1C01
+ <<<

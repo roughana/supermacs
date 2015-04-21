@@ -171,13 +171,3 @@ _TextReadBlock MAC
 _ReadLine MAC
  Tool $240C
  <<<
-
-PrintLn MAC ; print a line of text
- pea ^text 
- pea text 
- ldx #$1A0C 
- jsl $E10000 
- bra cont 
-text str ]1
-cont
- <<<

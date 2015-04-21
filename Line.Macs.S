@@ -167,3 +167,13 @@ _LEGetTextHand MAC
 _LEGetTextLen MAC
  Tool $2314
  <<<
+~GetLEDefProc MAC
+ PHS 2
+_GetLEDefProc MAC
+ Tool $2414
+ <<<
+~qLEStartUp MAC
+ PHW ]1
+ NextDP ]2;$100
+ Tool $214
+ <<<

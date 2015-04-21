@@ -48,3 +48,37 @@ _DrawIcon MAC
 _SpecialRect MAC
  Tool $C12
  <<<
+~SeedFill MAC
+ PxL ]1;]2;]3;]4
+ PxW ]5;]6;]7
+ PxL ]8;]9
+_SeedFill MAC
+ Tool $D12
+ <<<
+~CalcMask MAC
+ PxL ]1;]2;]3;]4
+ PHW ]5
+ PxL ]6;]7
+_CalcMask MAC
+ Tool $E12
+ <<<
+~GetSysIcon MAC
+ P2SW ]1
+ PHWL ]2;]3
+_GetSysIcon MAC
+ Tool $F12
+ <<<
+~PixelMap2Rgn MAC
+ P2SL ]1
+ PxW ]2;]3
+_PixelMap2Rgn MAC
+ Tool $1012
+ <<<
+_IBeamCursor MAC
+ Tool $1312
+ <<<
+~WooshRect MAC
+ PxL ]1;]2;]3
+_WooshRect MAC
+ Tool $1412
+ <<<

@@ -9,11 +9,9 @@ _IMBootInit MAC
  Tool $10B
  <<<
 _IMStartUp MAC
-_IntStartUp MAC
  Tool $20B
  <<<
 _IMShutDown MAC
-_IntShutDown MAC
  Tool $30B
  <<<
 ~IMVersion MAC
@@ -179,13 +177,13 @@ _Long2Hex MAC
  <<<
 ~Hex2Int MAC
  PHA
- PHLW ]2;]3
+ PHLW ]1;]2
 _Hex2Int MAC
  Tool $240B
  <<<
 ~Hex2Long MAC
  PHS 2
- PHLW ]2;]3
+ PHLW ]1;]2
 _Hex2Long MAC
  Tool $250B
  <<<

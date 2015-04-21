@@ -272,3 +272,123 @@ _SetMenuBar MAC
 _SetMItemName MAC
  Tool $3A0F
  <<<
+~GetPopUpDefProc MAC
+ PHS 2
+_GetPopUpDefProc MAC
+ Tool $3B0F
+ <<<
+~PopUpMenuSelect MAC
+ PHA
+ PxW ]1;]2;]3;]4
+ PHL ]5
+_PopUpMenuSelect MAC
+ Tool $3C0F
+ <<<
+~DrawPopUp MAC
+ PxW ]1;]2;]3;]4
+ PxW ]5;]6;]7
+_DrawPopUp MAC
+ Tool $3D0F
+ <<<
+~NewMenu2 MAC
+ P2SW ]1
+ PHL ]2
+_NewMenu2 MAC
+ Tool $3E0F
+ <<<
+~InsertMItem2 MAC
+ PHWL ]1;]2
+ PxW ]3;]4
+_InsertMItem2 MAC
+ Tool $3F0F
+ <<<
+~SetMenuTitle2 MAC
+ PHWL ]1;]2
+ PHW ]3
+_SetMenuTitle2 MAC
+ Tool $400F
+ <<<
+~SetMItem2 MAC
+ PHWL ]1;]2
+ PHW ]3
+_SetMItem2 MAC
+ Tool $410F
+ <<<
+~SetMItemName2 MAC
+ PHWL ]1;]2
+ PHW ]3
+_SetMItemName2 MAC
+ Tool $420F
+ <<<
+~NewMenuBar2 MAC
+ P2SW ]1
+ PxL ]2;]3
+_NewMenuBar2 MAC
+ Tool $430F
+ <<<
+_HideMenuBar MAC
+ Tool $450F
+ <<<
+_ShowMenuBar MAC
+ Tool $460F
+ <<<
+~SetMItemIcon MAC
+ PHWL ]1;]2
+ PHW ]3
+_SetMItemIcon MAC
+ Tool $470F
+ <<<
+~GetMItemIcon MAC
+ P2SW ]1
+_GetMItemIcon MAC
+ Tool $480F
+ <<<
+~SetMItemStruct MAC
+ PHWL ]1;]2
+ PHW ]3
+_SetMItemStruct MAC
+ Tool $490F
+ <<<
+~GetMItemStruct MAC
+ P2SW ]1
+_GetMItemStruct MAC
+ Tool $4A0F
+ <<<
+~RemoveMItemStruct MAC
+ PHW ]1
+_RemoveMItemStruct MAC
+ Tool $4B0F
+ <<<
+~GetMItemFlag2 MAC
+ P1SW ]1
+_GetMItemFlag2 MAC
+ Tool $4C0F
+ <<<
+~SetMItemFlag2 MAC
+ PxW ]1;]2
+_SetMItemFlag2 MAC
+ Tool $4D0F
+ <<<
+~GetMItemBlink MAC
+ PHA
+_GetMItemBlink MAC
+ Tool $4F0F
+ <<<
+~InsertPathMItems MAC
+ PHWL ]1;]2
+ PxW ]3;]4;]5;]6
+ PHL ]7
+_InsertPathMItems MAC
+ Tool $500F
+ <<<
+
+~qMenuStartUp MAC
+ PHW ]1
+ NextDP ]2;$100
+ Tool $20F
+ <<<
+~qNewMenu MAC
+ ~NewMenu ]1
+ PHW #0
+ _InsertMenu
+ <<<

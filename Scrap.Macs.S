@@ -77,3 +77,8 @@ _GetScrapCount MAC
 _GetScrapState MAC
  Tool $1316
  <<<
+~GetIndScrap MAC
+ PHWL ]1;]2
+_GetIndScrap MAC
+ Tool $1416
+ <<<

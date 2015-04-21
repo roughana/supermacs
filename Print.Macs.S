@@ -94,12 +94,15 @@ _PrError MAC
 _PrSetError MAC
  Tool $1513
  <<<
-~PrChooser MAC ; alias
 ~PrChoosePrinter MAC
  PHA
-_PrChooser MAC ; alias
 _PrChoosePrinter MAC
  Tool $1613
+ <<<
+~PrGetPrinterSpecs MAC
+ PHS 2
+_PrGetPrinterSpecs MAC
+ Tool $1813
  <<<
 _LLDStartUp MAC
  Tool $1913
@@ -126,6 +129,31 @@ _PrDriverVer MAC
 _PrPortVer MAC
  Tool $2413
  <<<
+~PrGetZoneName MAC
+ PHS 2
+_PrGetZoneName MAC
+ Tool $2513
+ <<<
+~PrGetPrinterDvrName MAC
+ PHS 2
+_PrGetPrinterDvrName MAC
+ Tool $2813
+ <<<
+~PrGetPortDvrName MAC
+ PHS 2
+_PrGetPortDvrName MAC
+ Tool $2913
+ <<<
+~PrGetUserName MAC
+ PHS 2
+_PrGetUserName MAC
+ Tool $2A13
+ <<<
+~PrGetNetworkName MAC
+ PHS 2
+~PrGetNetworkName MAC
+ Tool $2B13
+ <<<
 ~PMUnloadDriver MAC
  PHW ]1
 _PMUnloadDriver MAC
@@ -135,4 +163,28 @@ _PMUnloadDriver MAC
  PHW ]1
 _PMLoadDriver MAC
  Tool $3513
+ <<<
+~PrGetDocName MAC
+ PHS 2
+_PrGetDocName MAC
+ Tool $3613
+ <<<
+~PrSetDocName MAC
+ PHL ]1
+_PrSetDocName MAC
+ Tool $3713
+ <<<
+~PrGetPgOrientation MAC
+ P1SL ]1
+_PrGetPgOrientation MAC
+ Tool $3813
+ <<<
+
+~qPMStartUp MAC
+ PHW ]1
+ CLC
+ LDA ]2
+ ADC ]NextDP
+ PHA
+ Tool $0213
  <<<

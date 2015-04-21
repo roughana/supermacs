@@ -120,3 +120,24 @@ _SetEventMask MAC
 _FakeMouse MAC
  Tool $1906
  <<<
+~SetAutoKeyLimit MAC
+ PHW ]1
+_SetAutoKeyLimit MAC
+ Tool $1A06
+ <<<
+~GetKeyTranslation MAC
+ P1SW ]1
+_GetKeyTranslation MAC
+ Tool $1B06
+ <<<
+~SetKeyTranslation MAC
+ PHW ]1
+_SetKeyTranslation MAC
+ Tool $1C06
+ <<<
+~qEMStartUp MAC
+ NextDP ]1;$100
+ PxW ]2;]3;]4;]5
+ PxW ]6;]7
+ Tool $206
+ <<<

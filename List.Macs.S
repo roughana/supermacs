@@ -69,3 +69,48 @@ _ResetMember MAC
 _NewList MAC
  Tool $101C
  <<<
+~DrawMember2 MAC
+ PHWL ]1;]2
+_DrawMember2 MAC
+ Tool $111C
+ <<<
+~NextMember2 MAC
+ PHA
+ PHWL ]1;]2
+_NextMember2 MAC
+ Tool $121C
+ <<<
+~ResetMember2 MAC
+ P1SL ]1
+_ResetMember2 MAC
+ Tool $131C
+ <<<
+~SelectMember2 MAC
+ PHWL ]1;]2
+_SelectMember2 MAC
+ Tool $141C
+ <<<
+~SortList2 MAC
+ PxL ]1;]2
+_SortList2 MAC
+ Tool $151C
+ <<<
+~NewList2 MAC
+ PHL ]1
+ PxW ]2;]3;]4;]5
+ PHL ]6
+_NewList2 MAC
+ Tool $161C
+ <<<
+~ListKey MAC
+ PHWL ]1;]2
+ PHL ]3
+_ListKey MAC
+ Tool $171C
+ <<<
+~CompareStrings MAC
+ P1SW ]1
+ PxL ]2;]3
+_CompareStrings MAC
+ Tool $181C
+ <<<

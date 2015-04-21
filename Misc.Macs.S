@@ -207,3 +207,84 @@ _GetAbsClamp MAC
 _SysBeep MAC
  Tool $2C03
  <<<
+~AddToQueue MAC
+ PxL ]1;]2
+_AddToQueue MAC
+ Tool $2E03
+ <<<
+~DeleteFromQueue MAC
+ PxL ]1;]2
+_DeleteFromQueue MAC
+ Tool $2F03
+ <<<
+~SetInterruptState MAC
+ PHLW ]1;]2
+_SetInterruptState MAC
+ Tool $3003
+ <<<
+~GetInterruptState MAC
+ PHLW ]1;]2
+_GetInterruptState MAC
+ Tool $3103
+ <<<
+~GetIntStateRecSize MAC
+ PHA
+_GetIntStateRecSize MAC
+ Tool $3203
+ <<<
+~ReadMouse2 MAC
+ PHS 3
+_ReadMouse2 MAC
+ Tool $3303
+ <<<
+~GetCodeResConverter MAC
+ PHS 2
+_GetCodeResConverter MAC
+ Tool $3403
+ <<<
+_GetROMResource MAC ;private
+ Tool $3503
+ <<<
+_ReleaseROMResource MAC ;private
+ Tool $3603
+ <<<
+~ConvSeconds MAC
+ P2SW ]1
+ PxL ]2;]3
+_ConvSeconds MAC
+ Tool $3703
+ <<<
+~SysBeep MAC
+ PHW ]1
+_SysBeep MAC
+ Tool $3803
+ <<<
+~VersionString MAC
+ PHW ]1
+ PxL ]2;]3
+_VersionString MAC
+ Tool $3903
+ <<<
+~WaitUntil MAC
+ P1SW ]1
+ PHW ]2
+_WaitUntil MAC
+ Tool $3A03
+ <<<
+~StringToText MAC
+ PHS 2
+ PHWL ]1;]2
+ PHWL ]3;]4
+_StringToText MAC
+ Tool $3B03
+ <<<
+~ShowBootInfo MAC
+ PxL ]1;]2
+_ShowBootInfo MAC
+ Tool $3C03
+ <<<
+~ScanDevices MAC
+ PHA
+_ScanDevices MAC
+ Tool $3D03
+ <<<

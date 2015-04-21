@@ -50,6 +50,16 @@ _ReallocHandle MAC
 _RestoreHandle MAC
  Tool $B02
  <<<
+~AddToOOMQueue MAC
+ PHL ]1
+_AddToOOMQueue MAC
+ Tool $C02
+ <<<
+~DeleteFromOOMQueue MAC
+ PHL ]1
+_DeleteFromOOMQueue MAC
+ Tool $D02
+ <<<
 ~DisposeHandle MAC
  PHL ]1
 _DisposeHandle MAC
@@ -162,4 +172,10 @@ _BlockMove MAC
  PHS 2
 _RealFreeMem MAC
  Tool $2F02
+ <<<
+~SetHandleID MAC
+ P1SW ]1
+ PHL ]2
+_SetHandleID MAC
+ Tool $3002
  <<<

@@ -62,3 +62,46 @@ _SFPPutFile MAC
 _SFAllCaps MAC
  Tool $D17
  <<<
+~SFGetFile2 MAC
+ PxW ]1;]2;]3
+ PxL ]4;]5;]6;]7
+_SFGetFile2 MAC
+ Tool $E17
+ <<<
+~SFPutFile2 MAC
+ PxW ]1;]2;]3
+ PHLW ]4;]5
+ PxL ]6;]7
+_SFPutFile2 MAC
+ Tool $F17
+ <<<
+_SFPGetFile2 MAC
+ Tool $1017
+ <<<
+_SFPPutFile2 MAC
+ Tool $1117
+ <<<
+~SFShowInvisible MAC
+ P1SW ]1
+_SFShowInvisible MAC
+ Tool $1217
+ <<<
+~SFReScan MAC
+ PxL ]1;]2
+_SFReScan MAC
+ Tool $1317
+ <<<
+~SFMultiGet2 MAC
+ PxW ]1;]2;]3
+ PxL ]4;]5;]6;]7
+_SFMultiGet2 MAC
+ Tool $1417
+ <<<
+_SFPMultiGet2 MAC
+ Tool $1517
+ <<<
+~qSFStartUp MAC
+ PHW ]1
+ NextDP ]2;$100
+ Tool $217
+ <<<

@@ -134,3 +134,8 @@ _FamNum2ItemID MAC
 _InstallWithStats MAC
  Tool $1C1B
  <<<
+~qFMStartUp MAC
+ PHW ]1
+ NextDP ]2;$100
+ Tool $21B
+ <<<

@@ -38,17 +38,21 @@ _SANEDecStr816 MAC
 _SANEElems816 MAC
  Tool $B0A
  <<<
+~qSANEStartUp MAC
+ NextDP ]1;$100
+ Tool $20A
+ <<<
 * Auxiliary macros
 
-FOPRF MAC  ;call FP
+FOPRF MAC ;call FP
  PEA ]1
  _SANEFP816
  <<<
-FOPRD MAC  ;call DecStr
+FOPRD MAC ;call DecStr
  PEA ]1
  _SANEDecStr816
  <<<
-FOPRE MAC  ;call Elems
+FOPRE MAC ;call Elems
  PEA ]1
  _SANEElems816
  <<<
@@ -360,61 +364,61 @@ FCPXL MAC
 FBEQ MAC
  BEQ ]1
  <<<
-FBLT MAC  ;less
+FBLT MAC ;less
  BMI ]1
  <<<
-FBLE MAC  ;less or equal
+FBLE MAC ;less or equal
  BMI ]1
- BEQ ]1
+ BEQ ]2
  <<<
-FBGT MAC  ;greater
+FBGT MAC ;greater
  BVS ]1
  <<<
-FBGE MAC  ;greater or equal
+FBGE MAC ;greater or equal
  BVS ]1
  BEQ ]1
  <<<
-FBULT MAC  ;less or unordered
+FBULT MAC ;less or unordered
  BMI ]1
  BVS *+4
  BNE ]1
  <<<
-FBULE MAC  ;unordered, less, or equal
+FBULE MAC ;unordered, less, or equal
  BMI ]1
  BEQ ]1
  BVC ]1
  <<<
-FBUGT MAC  ;unordered or greater
+FBUGT MAC ;unordered or greater
  BVS ]1
  BMI *+4
  BNE ]1
  <<<
-FBUGE MAC  ;unordered, greater, or equal
+FBUGE MAC ;unordered, greater, or equal
  BVS ]1
  BEQ ]1
  BPL ]1
  <<<
-FBU MAC  ;unordered
+FBU MAC ;unordered
  BVS *+6
  BMI *+4
  BNE ]1
  <<<
-FBO MAC  ;ordered
+FBO MAC ;ordered
  BMI ]1
  BVS ]1
  BEQ ]1
  <<<
-FBNE MAC  ;not equal
+FBNE MAC ;not equal
  BMI ]1
  BVS ]1
  BNE ]1
  <<<
-FBUE MAC  ;unordered, equal
+FBUE MAC ;unordered, equal
  BEQ ]1
  BMI *+4
  BVC ]1
  <<<
-FBLG MAC  ;less or greater
+FBLG MAC ;less or greater
  BMI ]1
  BVS ]1
  <<<
@@ -441,58 +445,58 @@ FCLASSL MAC
 * The following macros provide branches based on the
 * the result of a FCLASSz macro.
 
-FBSNAN MAC  ;signaling NaN
+FBSNAN MAC ;signaling NaN
  TXA
  ASL
  CMP #2*$FC
  BEQ ]1
  <<<
-FBQNAN MAC  ;quiet NaN
+FBQNAN MAC ;quiet NaN
  TXA
  ASL
  CMP #2*$FD
  BEQ ]1
  <<<
-FBINF MAC  ;infinite
+FBINF MAC ;infinite
  TXA
  ASL
  CMP #2*$FE
  BEQ ]1
  <<<
-FBZERO MAC  ;zero
+FBZERO MAC ;zero
  TXA
  ASL
  CMP #2*$FF
  BEQ ]1
  <<<
-FBNORM MAC  ;normal
+FBNORM MAC ;normal
  TXA
  ASL
  BEQ ]1
  <<<
-FBDENORM MAC  ;denormal
+FBDENORM MAC ;denormal
  TXA
  ASL
  CMP #2*1
  BEQ ]1
  <<<
-FBNZENUM MAC  ;non-zero num (norm or denorm)
+FBNZENUM MAC ;non-zero num (norm or denorm)
  TXA
  XBA
  ASL
  BCC ]1
  <<<
-FBNUM MAC  ;number (zero, norm or denorm)
+FBNUM MAC ;number (zero, norm or denorm)
  TXA
  INC A
  XBA
  ASL
  BCC ]1
  <<<
-FBMINUS MAC  ;minus sign
+FBMINUS MAC ;minus sign
  BMI ]1
  <<<
-FBPLUS MAC  ;plus sign
+FBPLUS MAC ;plus sign
  BPL ]1
  <<<
 
@@ -534,66 +538,66 @@ FSETHV MAC
 
 * Elementary function macros
 
-FLNX MAC  ;natural (base-e) log
+FLNX MAC ;natural (base-e) log
  FOPRE $00
  <<<
-FLOG2X MAC  ;base-2 log
+FLOG2X MAC ;base-2 log
  FOPRE $02
  <<<
-FLN1X MAC  ;ln (1 + x)
+FLN1X MAC ;ln (1 + x)
  FOPRE $04
  <<<
-FLOG21X MAC  ;log2 (1 +x)
+FLOG21X MAC ;log2 (1 +x)
  FOPRE $06
  <<<
-FEXPX MAC  ;base-e exponential
+FEXPX MAC ;base-e exponential
  FOPRE $08
  <<<
-FEXP2X MAC  ;base-2 exponential
+FEXP2X MAC ;base-2 exponential
  FOPRE $0A
  <<<
-FEXP1X MAC  ;exp (x) - 1
+FEXP1X MAC ;exp (x) - 1
  FOPRE $0C
  <<<
-FEXP21X MAC  ;exp2 (x) - 1
+FEXP21X MAC ;exp2 (x) - 1
  FOPRE $0E
  <<<
-FXPWRI MAC  ;integer exponential
+FXPWRI MAC ;integer exponential
  FOPRE $10
  <<<
-FXPWRY MAC  ;general exponential
+FXPWRY MAC ;general exponential
  FOPRE $12
  <<<
-FCOMPOUND MAC  ;compound
+FCOMPOUND MAC ;compound
  FOPRE $14
  <<<
-FANNUITY MAC  ;annuity
+FANNUITY MAC ;annuity
  FOPRE $16
  <<<
-FATANX MAC  ;arctangent
+FATANX MAC ;arctangent
  FOPRE $18
  <<<
-FSINX MAC  ;sine
+FSINX MAC ;sine
  FOPRE $1A
  <<<
-FCOSX MAC  ;cosine
+FCOSX MAC ;cosine
  FOPRE $1C
  <<<
-FTANX MAC  ;tangent
+FTANX MAC ;tangent
  FOPRE $1E
  <<<
-FRANDX MAC  ;random number generator
+FRANDX MAC ;random number generator
  FOPRE $20
  <<<
 
 * Scanner and formatter function macros
 
-FPSTR2DEC MAC  ;pascal string to decimal record
+FPSTR2DEC MAC ;pascal string to decimal record
  FOPRD 0
  <<<
-FDEC2STR MAC  ;decimal record to pascal string
+FDEC2STR MAC ;decimal record to pascal string
  FOPRD 1
  <<<
-FCSTR2DEC MAC  ;C string to decimal record
+FCSTR2DEC MAC ;C string to decimal record
  FOPRD 2
  <<<

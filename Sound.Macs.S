@@ -91,3 +91,27 @@ _SetUserSoundIRQV MAC
 _FFSoundDoneStatus MAC
  Tool $1408
  <<<
+~FFSetUpSound MAC
+ PHWL ]1;]2
+_FFSetUpSound MAC
+ Tool $1508
+ <<<
+~FFStartPlaying MAC
+ PHW ]1
+_FFStartPlaying MAC
+ Tool $1608
+ <<<
+~SetDocReg MAC
+ PHL ]1
+_SetDocReg MAC
+ Tool $1708
+ <<<
+~ReadDocReg MAC
+ PHL ]1
+_ReadDocReg MAC
+ Tool $1808
+ <<<
+~qSoundStartUp MAC
+ NextDP ]1;$100
+ Tool $208
+ <<<

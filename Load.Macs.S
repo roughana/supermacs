@@ -1,4 +1,4 @@
-* Load Manager macros
+* System Loader macros
 *   by Dave Klimas
 ;
 ; Copyright Apple Computer, Inc. 1986, 1987
@@ -29,10 +29,17 @@ _LoaderStatus MAC
  <<<
 ~InitialLoad MAC
  PHS 5
- PHW ]1
- PHLW ]2;]3
+ PHWL ]1;]2
+ PHW ]3
 _InitialLoad MAC
  Tool $911
+ <<<
+~InitialLoad2 MAC
+ PHS 5
+ PHWL ]1;]2
+ PxW ]3;]4
+_InitialLoad2 MAC
+ Tool $2011
  <<<
 ~Restart MAC
  PHS 5
@@ -75,15 +82,31 @@ _GetLoadSegInfo MAC
 _GetUserID MAC
  Tool $1011
  <<<
+~GetUserID2 MAC
+ P1SL ]1
+_GetUserID2 MAC
+ Tool $2111
+ <<<
 ~LGetPathname MAC
  PHS 2
  PxW ]1;]2
 _LGetPathname MAC
  Tool $1111
  <<<
-~UserShutdown MAC
+~LGetPathname2 MAC
+ PHS 2
+ PxW ]1;]2
+_LGetPathname2 MAC
+ Tool $2211
+ <<<
+~UserShutDown MAC
  PHA
  PxW ]1;]2
-_UserShutdown MAC
+_UserShutDown MAC
  Tool $1211
+ <<<
+~RenamePathname MAC
+ PxL ]1;]2
+_RenamePathname MAC
+ Tool $1311
  <<<

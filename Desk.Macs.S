@@ -108,3 +108,41 @@ _CloseAllNDAs MAC
 _FixAppleMenu MAC
  Tool $1E05
  <<<
+~AddToRunQ MAC
+ PHL ]1
+_AddToRunQ MAC
+ Tool $1F05
+ <<<
+~RemoveFromRunQ MAC
+ PHL ]1
+_RemoveFromRunQ MAC
+ Tool $2005
+ <<<
+~RemoveCDA MAC
+ PHL ]1
+_RemoveCDA MAC
+ Tool $2105
+ <<<
+~RemoveNDA MAC
+ PHL ]1
+_RemoveNDA MAC
+ Tool $2205
+ <<<
+~GetDeskAccInfo MAC
+ PHWL ]1;]2
+ PHWL ]3;]4
+_GetDeskAccInfo MAC
+ Tool $2305
+ <<<
+~CallDeskAcc MAC
+ PHA
+ PHWL ]1;]2
+ PHWL ]3;]4
+_CallDeskAcc MAC
+ Tool $2405
+ <<<
+~GetDeskGlobal MAC
+ P2SW ]1
+_GetDeskGlobal MAC
+ Tool $2505
+ <<<

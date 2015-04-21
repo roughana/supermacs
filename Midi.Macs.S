@@ -5,7 +5,6 @@
 ; and Roger Wagner Publishing, Inc. 1988
 ; All Rights Reserved
 ;
-
 _MidiBootInit MAC
  Tool $120
  <<<

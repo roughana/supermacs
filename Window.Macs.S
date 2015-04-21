@@ -288,7 +288,6 @@ _SetZoomRect MAC
 ~RefreshDesktop MAC
  PHL ]1
 _RefreshDesktop MAC
-_Refresh MAC
  Tool $390E
  <<<
 ~InvalRect MAC
@@ -450,8 +449,7 @@ _GetWindowMgrGlobals MAC
  Tool $580E
  <<<
 ~AlertWindow MAC
- PHA
- PHW ]1
+ P1SW ]1
  PxL ]2;]3
 _AlertWindow MAC
  Tool $590E
@@ -465,8 +463,88 @@ _EndFrameDrawing MAC
  Tool $5B0E
  <<<
 ~ResizeWindow MAC
- PHW ]1
- PxL ]2;]3
+ PHWL ]1;]2
+ PHL ]3
 _ResizeWindow MAC
  Tool $5C0E
+ <<<
+_TaskMasterContent MAC ;private
+ Tool $5D0E
+ <<<
+_TaskMasterKey MAC ;private
+ Tool $5E0E
+ <<<
+~TaskMasterDA MAC
+ P1SW ]1
+ PHL ]2
+_TaskMasterDA MAC
+ Tool $5F0E
+ <<<
+~CompileText MAC
+ P2SW ]1
+ PxL ]2;]3
+ PHW ]4
+_CompileText MAC
+ Tool $600E
+ <<<
+~NewWindow2 MAC
+ PHS 2
+ PxL ]1;]2;]3;]4
+ PHWL ]5;]6
+ PHW ]7
+_NewWindow2 MAC
+ Tool $610E
+ <<<
+~ErrorWindow MAC
+ P1SW ]1
+ PHLW ]2;]3
+_ErrorWindow MAC
+ Tool $620E
+ <<<
+~GetAuxWIndInfo MAC
+ P2SL ]1
+_GetAuxWIndInfo MAC
+ Tool $630E
+ <<<
+~DoModalWindow MAC
+ P2SL ]1
+ PxL ]2;]3
+ PHLW ]4;]5
+_DoModalWindow MAC
+ Tool $640E
+ <<<
+~MWGetCtlPart MAC
+ PHA
+_MWGetCtlPart MAC
+ Tool $650E
+ <<<
+~MWSetMenuProc MAC
+ P2SL ]1
+_MWSetMenuProc MAC
+ Tool $660E
+ <<<
+_MWStdDrawProc MAC
+ Tool $670E
+ <<<
+_MWSetUpEditMenu MAC
+ Tool $680E
+ <<<
+~FindCursorCtl MAC
+ PHA
+ PHLW ]1;]2
+ PHWL ]3;]4
+_FindCursorCtl MAC
+ Tool $690E
+ <<<
+~ResizeInfoBar MAC
+ PxW ]1;]2
+ PHL ]3
+_ResizeInfoBar MAC
+ Tool $6A0E
+ <<<
+~HandleDiskInsert MAC
+ PHS 2
+ PxW ]1;]2
+_HandleDiskInsert MAC
+ Tool $6B0E
  <<<
