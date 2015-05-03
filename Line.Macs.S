@@ -172,6 +172,12 @@ _LEGetTextLen MAC
 _GetLEDefProc MAC
  Tool $2414
  <<<
+~LEClassifyKey MAC
+ P1SW ]1
+ PHL ]2
+_LEClassifyKey MAC
+ Tool $2514
+ <<<
 ~qLEStartUp MAC
  PHW ]1
  NextDP ]2;$100

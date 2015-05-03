@@ -82,3 +82,9 @@ _GetScrapState MAC
 _GetIndScrap MAC
  Tool $1416
  <<<
+~ShowClipboard MAC
+ P2SW ]1
+ PHL ]2
+_ShowClipboard MAC
+ Tool $1516
+ <<<

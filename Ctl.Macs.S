@@ -290,7 +290,30 @@ _SetLETextByID MAC
 _GetLETextByID MAC
  Tool $3B10
  <<<
-
+~SetCtlValueByID MAC
+ PHWL ]1;]2
+ PHL ]3
+_SetCtlValueByID MAC
+ Tool $3C10
+ <<<
+~GetCtlValueByID MAC
+ P1SL ]1
+ PHL ]2
+_GetCtlValueByID MAC
+ Tool $3D10
+ <<<
+~InvalOneCtlByID MAC
+ PxL ]1;]2
+_InvalOneCtlByID MAC
+ Tool $3E10
+ <<<
+~HiliteCtlByID MAC
+ PHWL ]1;]2
+ PHL ]3
+_HiliteCtlByID MAC
+ Tool $3F10
+ <<<
+ 
 ~qCtlStartUp MAC
  PHW ]1
  NextDP ]2;$100

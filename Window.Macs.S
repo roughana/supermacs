@@ -548,3 +548,8 @@ _ResizeInfoBar MAC
 _HandleDiskInsert MAC
  Tool $6B0E
  <<<
+~UpdateWindow MAC
+ PHWL ]1;]2
+_UpdateWindow MAC
+ Tool $6C0E
+ <<<

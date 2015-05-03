@@ -236,3 +236,15 @@ _LoadNamedResource MAC
 _SetResourceName MAC
  Tool $2D1E
  <<<
+~OpenResourceFileByID MAC
+ P1SW ]1
+ PHW ]2
+_OpenResourceFileByID MAC
+ Tool $2E1E
+ <<<
+~CompactResourceFile MAC
+ PxW ]1;]2
+_CompactResourceFile MAC
+ Tool $2F1E
+ <<<
+ 

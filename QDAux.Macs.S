@@ -82,3 +82,22 @@ _IBeamCursor MAC
 _WooshRect MAC
  Tool $1412
  <<<
+~DrawStringWidth MAC
+ P1SL ]1
+ PHW ]2
+_DrawStringWidth MAC
+ Tool $1512
+ <<<
+~UseColorTable MAC
+ P2SW ]1
+ PHLW ]2;]3
+_UseColorTable MAC
+ Tool $1612
+ <<<
+~RestoreColorTable MAC
+ PHL ]1
+ PHW ]2
+_RestoreColorTable MAC
+ Tool $1712
+ <<<
+ 

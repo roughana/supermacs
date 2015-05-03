@@ -288,3 +288,16 @@ _ShowBootInfo MAC
 _ScanDevices MAC
  Tool $3D03
  <<<
+~AlertMessage MAC
+ P1SL ]1
+ PHWL ]2;]3
+_AlertMessage MAC
+ Tool $3E03
+ <<<
+~DoSysPrefs MAC
+ P1SW ]1
+ PHW ]2
+_DoSysPrefs MAC
+ Tool $3F03
+ <<<
+ 
