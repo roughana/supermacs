@@ -111,9 +111,9 @@ _WriteResource MAC
 _ReleaseResource MAC
  Tool $171E
  <<<
-~DetatchResource MAC
+~DetachResource MAC
  PHWL ]1;]2
-_DetatchResource MAC
+_DetachResource MAC
  Tool $181E
  <<<
 ~UniqueResourceID MAC
