@@ -107,7 +107,6 @@ _SetDefaultTPT MAC
 ~MessageByName MAC
  PHS 2
  PHWL ]1;]2
- PxW ]3;]4
 _MessageByName MAC
  Tool $1701
  <<<
