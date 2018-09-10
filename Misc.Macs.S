@@ -254,9 +254,9 @@ _ReleaseROMResource MAC ;private
 _ConvSeconds MAC
  Tool $3703
  <<<
-~SysBeep MAC
+~SysBeep2 MAC
  PHW ]1
-_SysBeep MAC
+_SysBeep2 MAC
  Tool $3803
  <<<
 ~VersionString MAC
