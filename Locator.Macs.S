@@ -110,16 +110,16 @@ _SetDefaultTPT MAC
 _MessageByName MAC
  Tool $1701
  <<<
-~StartupTools MAC
+~StartUpTools MAC
  PHS 2
  PxW ]1;]2
  PHL ]3
-_StartupTools MAC
+_StartUpTools MAC
  Tool $1801
  <<<
-~ShutdownTools MAC
+~ShutDownTools MAC
  PHWL ]1;]2
-_ShutdownTools MAC
+_ShutDownTools MAC
  Tool $1901
  <<<
 ~GetMsgHandle MAC
